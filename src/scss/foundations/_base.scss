@@ -1,0 +1,38 @@
+body{
+	width: 100%;
+
+	img{
+		max-width: 100%;
+	}
+}
+
+
+//breakpoint
+$breakpoint: (sp: 'screen and (max-width: 999px)', pc: 'screen and (min-width: 1921px)');
+
+@mixin mq($bp) {
+	@media #{map-get($breakpoint, $bp)} {
+		@content;
+	}
+}
+
+//font size
+$baseFontSize: 16;
+@function rem($pixels) {
+	@return $pixels / $baseFontSize * 1rem;
+}
+
+$baseWidth: 1920;
+@function vw($pixelsVw) {
+	@return $pixelsVw / $baseWidth * 100vw;
+}
+
+// p {
+// 	font-size: vw(40);
+// 	@include mq(pc) {
+// 		font-size: 40px;
+// 	}
+// 	@include mq(sp) {
+// 		font-size: 24px;
+// 	}
+// }

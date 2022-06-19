@@ -1,0 +1,11 @@
+$font_color: #000;
+$point_color: blue;
+
+@mixin baseFont($weight: 400) {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: $weight;
+}
+
+body{
+  @include baseFont;
+}

@@ -1,0 +1,12 @@
+.l-header{
+  width: 100%;
+
+  &__wrap{
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  &__nav{
+    display: flex;
+  }
+}
