@@ -1,4 +1,7 @@
-@use '_reset';
-@use '_base';
-@use '_config';
-@use '_mixin';
+@forward 'reset';
+@forward 'base';
+@forward 'mixin';
+@forward 'color';
+@forward 'font';
+@forward 'function';
+@forward 'variable';

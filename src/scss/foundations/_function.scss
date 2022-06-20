@@ -1,0 +1,21 @@
+//@functionを定義
+//font size
+$baseFontSize: 16;
+@function rem($pixels) {
+	@return $pixels / $baseFontSize * 1rem;
+}
+
+$baseWidth: 1920;
+@function vw($pixelsVw) {
+	@return $pixelsVw / $baseWidth * 100vw;
+}
+
+// p {
+// 	font-size: vw(40);
+// 	@include mq(pc) {
+// 		font-size: 40px;
+// 	}
+// 	@include mq(sp) {
+// 		font-size: 24px;
+// 	}
+// }

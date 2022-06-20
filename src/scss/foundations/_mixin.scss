@@ -1,0 +1,107 @@
+// Breakpoint
+// $breakpoint: (sp: 'screen and (max-width: 999px)', pc: 'screen and (min-width: 1000px)')!default;
+@mixin break-point($point) {
+	@if $point == pc {
+		@media only screen and (max-width: 50em) {
+			@content;
+		}
+	} @else if $point == sp {
+		@media only screen and (max-width: 20em) {
+			@content;
+		}
+	}
+}
+
+@mixin mq($bp) {
+	@media #{map-get($breakpoint, $bp)} {
+		@content;
+	}
+}
+
+// font
+@mixin baseFont($weight: 400) {
+	font-family: $base-font;
+	font-weight: $weight;
+}
+
+// box-sizing（ボックスサイズ）
+@mixin box-sizing($type) {
+	box-sizing: $type;
+}
+
+// 不透明度
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	filter: alpha(opacity=($opacity * 100));
+}
+
+// 円形
+@mixin circle {
+	@include border-radius(100%);
+}
+
+// 絶対配置中央揃え
+@mixin center-pos {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+// 天地の中央に配置
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+// Flex
+@mixin flexbox {
+	display: flex;
+}
+// flex(モダンブラウザの旧仕様にも対応したflexの指定)
+@mixin flex($values) {
+	flex: $values;
+}
+// flex(表示の順番)
+@mixin flex-order($order) {
+	order: $order;
+}
+// flex（表示の方向）
+@mixin flex-direction($direction) {
+	@if $direction == column {
+		flex-direction: column;
+	} @else {
+		flex-direction: row;
+	}
+}
+
+// グラデーション
+@mixin gradient($start-color, $end-color, $orientation) {
+	background: $start-color;
+	@if $orientation == vertical {
+		// vertical
+		background: linear-gradient(to bottom, $start-color 0%, $end-color 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(
+				startColorstr='$start-color',
+				endColorstr='$end-color',
+				GradientType=0
+			);
+	} @else if $orientation == horizontal {
+		// horizontal
+		background: linear-gradient(to right, $start-color 0%, $end-color 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(
+				startColorstr='$start-color',
+				endColorstr='$end-color',
+				GradientType=1
+			);
+	} @else {
+		// radial
+		background: radial-gradient(ellipse at center, $start-color 0%, $end-color 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(
+				startColorstr='$start-color',
+				endColorstr='$end-color',
+				GradientType=1
+			);
+	}
+}

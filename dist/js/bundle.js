@@ -1,6 +1,16 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/main.js":
+/*!************************!*\
+  !*** ./src/js/main.js ***!
+  \************************/
+/***/ (function() {
+
+
+
+/***/ }),
+
 /***/ "./src/scss/style.scss":
 /*!*****************************!*\
   !*** ./src/scss/style.scss ***!
@@ -10,16 +20,6 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./src/js/debug.js":
-/*!*************************!*\
-  !*** ./src/js/debug.js ***!
-  \*************************/
-/***/ (function() {
-
 
 
 /***/ })
@@ -101,12 +101,12 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/style.scss */ "./src/scss/style.scss");
-/* harmony import */ var _js_debug_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/debug.js */ "./src/js/debug.js");
-/* harmony import */ var _js_debug_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_debug_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _js_main_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/main.js */ "./src/js/main.js");
+/* harmony import */ var _js_main_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_main_js__WEBPACK_IMPORTED_MODULE_1__);
 /* My CSS */
 
-
 /* My JS */
+
 
 }();
 /******/ })()

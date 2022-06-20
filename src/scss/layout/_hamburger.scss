@@ -1,0 +1,7 @@
+@use '../foundations' as found;
+
+@include found.break-point(pc) {
+	.l-hamburger{
+		
+	}
+}
