@@ -6,7 +6,6 @@
         <meta name="description" content="ポートフォリオサイトへようこそ！">
         <title>ポートフォリオ</title>
         <link rel="stylesheet" href="/css/style.css">
-        <script src="/js/bundle.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
@@ -16,16 +15,20 @@
 <header class="l-header">
   <div class="l-header__wrap">
     <div class="l-header__logo"><a href="/"><img src="img/logo.svg" alt="logo"></a></div>
-    <nav class="l-header__nav">
-      <ul class="l-header__nav__list">
-        <li class="l-header__nav__list__item"><a href="#test">サンプル</a></li>
-        <li class="l-header__nav__list__item"><a href="#test">サンプル</a></li>
-        <li class="l-header__nav__list__item"><a href="#test">サンプル</a></li>
-      </ul>
-    </nav>
+    <div id="js-hamburger" class="l-hamburger">
+  <div class="l-hamburger__icon"></div>
+</div>
+<nav id="js-nav" class="l-nav">
+  <ul class="l-nav__list">
+    <li class="l-nav__list__item"><a href="#test">サンプル</a></li>
+    <li class="l-nav__list__item"><a href="#test">サンプル</a></li>
+    <li class="l-nav__list__item"><a href="#test">サンプル</a></li>
+  </ul>
+</nav>
   </div>
 </header>
   <main>メインコンテンツ</main>
 <footer>フッターエリア</footer>
+<script src="/js/bundle.js"></script>
 </body>
 </html>

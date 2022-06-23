@@ -135,4 +135,59 @@ button {
   display: flex;
 }
 
+.l-hamburger {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 100px;
+  left: 120px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+.l-hamburger__icon {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  position: absolute;
+  height: 8px;
+  width: 60px;
+  top: 30px;
+  background-color: #000;
+}
+.l-hamburger__icon:before {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  position: absolute;
+  width: 60px;
+  height: 8px;
+  background-color: #000;
+  content: "";
+  top: -20px;
+}
+.l-hamburger__icon:after {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  position: absolute;
+  width: 60px;
+  height: 8px;
+  background-color: #000;
+  content: "";
+  top: 20px;
+}
+.l-hamburger.is-open .l-hamburger__icon {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  background: transparent;
+}
+.l-hamburger.is-open .l-hamburger__icon:before {
+  -webkit-transform: rotateZ(45deg) scaleX(1.25) translate(13px, 13px);
+          transform: rotateZ(45deg) scaleX(1.25) translate(13px, 13px);
+}
+.l-hamburger.is-open .l-hamburger__icon:after {
+  -webkit-transform: rotateZ(-45deg) scaleX(1.25) translate(12px, -12px);
+          transform: rotateZ(-45deg) scaleX(1.25) translate(12px, -12px);
+}
+.l-hamburger:hover {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=style.css.map*/

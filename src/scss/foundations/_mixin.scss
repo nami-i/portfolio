@@ -1,45 +1,52 @@
-// Breakpoint
-// $breakpoint: (sp: 'screen and (max-width: 999px)', pc: 'screen and (min-width: 1000px)')!default;
-@mixin break-point($point) {
-	@if $point == pc {
-		@media only screen and (max-width: 50em) {
-			@content;
-		}
-	} @else if $point == sp {
-		@media only screen and (max-width: 20em) {
-			@content;
-		}
-	}
-}
+@use "color" as color;
 
+// ==========================================================================
+// Breakpoint
+// ==========================================================================
+$breakpoint: (
+	sp: 'screen and (max-width: 767px)',
+	tab: 'screen and (min-width: 768px)',
+	pc: 'screen and (min-width: 1025px)'
+);
 @mixin mq($bp) {
 	@media #{map-get($breakpoint, $bp)} {
 		@content;
 	}
 }
 
-// font
+// ==========================================================================
+// Font
+// ==========================================================================
 @mixin baseFont($weight: 400) {
 	font-family: $base-font;
 	font-weight: $weight;
 }
 
+// ==========================================================================
 // box-sizing（ボックスサイズ）
+// ==========================================================================
 @mixin box-sizing($type) {
 	box-sizing: $type;
 }
 
+// ==========================================================================
 // 不透明度
+// ==========================================================================
 @mixin opacity($opacity) {
 	opacity: $opacity;
 	filter: alpha(opacity=($opacity * 100));
 }
 
+// ==========================================================================
 // 円形
+// ==========================================================================
 @mixin circle {
 	@include border-radius(100%);
 }
 
+// ==========================================================================
+// Position
+// ==========================================================================
 // 絶対配置中央揃え
 @mixin center-pos {
 	position: absolute;
@@ -55,7 +62,9 @@
 	transform: translateY(-50%);
 }
 
+// ==========================================================================
 // Flex
+// ==========================================================================
 @mixin flexbox {
 	display: flex;
 }
@@ -76,7 +85,9 @@
 	}
 }
 
+// ==========================================================================
 // グラデーション
+// ==========================================================================
 @mixin gradient($start-color, $end-color, $orientation) {
 	background: $start-color;
 	@if $orientation == vertical {
@@ -104,4 +115,45 @@
 				GradientType=1
 			);
 	}
+}
+
+// ==========================================================================
+// Hamburger Button
+// ==========================================================================
+@mixin hbg-btn($left, $top) {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	top: $top;
+	left: $left;
+	transition-duration: 0.5s;
+}
+
+@mixin hbg-icon($height, $width) {
+	transition-duration: 0.5s;
+	position: absolute;
+	height: $height;
+	width: $width;
+	top: 30px;
+	background-color: color.$font_color;
+}
+
+@mixin hbg-icon-before($height, $width, $top) {
+	transition-duration: 0.5s;
+	position: absolute;
+	width: $width;
+	height: $height;
+	background-color: color.$font_color;
+	content: "";
+	top: $top;
+}
+
+@mixin hbg-icon-after($height, $width, $top) {
+	transition-duration: 0.5s;
+	position: absolute;
+	width: $width;
+	height: $height;
+	background-color: color.$font_color;
+	content: "";
+	top: $top;
 }

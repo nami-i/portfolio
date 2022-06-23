@@ -1,6 +1,41 @@
-@use '../foundations' as found;
+@use '../foundations/' as found;
 
-@include found.break-point(pc) {
+.l-hamburger {
+	@include found.hbg-btn(120px, 100px);
+
+	&__icon {
+		@include found.hbg-icon(8px, 60px);
+
+		&:before {
+			@include found.hbg-icon-before(8px, 60px, -20px);
+		}
+
+		&:after {
+			@include found.hbg-icon-after(8px, 60px, 20px);
+		}
+	}
+
+	&.is-open {
+		.l-hamburger__icon {
+			transition-duration: 0.5s;
+			background: transparent;
+
+			&:before {
+				transform: rotateZ(45deg) scaleX(1.25) translate(13px, 13px);
+			}
+
+			&:after {
+				transform: rotateZ(-45deg) scaleX(1.25) translate(12px, -12px);
+			}
+		}
+	}
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+
+@include found.mq(pc) {
 	.l-hamburger{
 		
 	}

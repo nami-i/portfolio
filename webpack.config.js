@@ -71,7 +71,7 @@ module.exports = {
 		open: true,
 		watchFiles: [ 'src/**/*', 'dist/**/*' ],
 		compress: true,
-		port: 3000,
+		port: 8080,
 	},
 
 	// ES5(IE11等)向けの指定（webpack 5以上で必要）
