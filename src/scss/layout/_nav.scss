@@ -1,63 +1,63 @@
 @use '../foundations' as found;
 
-@include found.mq(pc){
-  .l-nav{
-    margin: 0 20px 0 0;
+@include found.mq(pc) {
+	.l-nav {
+		margin: 0 20px 0 0;
 
-    &__list{
-      @include found.flexbox;
-      justify-content: flex-end;
+		&__list {
+			@include found.flexbox;
+			justify-content: flex-end;
 
-      &__item{
-        a{
-          display: block;
-          font-size: 1.6rem;
+			&__item {
+				a {
+					display: block;
+					font-size: 1.6rem;
 
-          &:hover{
-            color: found.$base_color;
-          }
-        }
+					&:hover {
+						color: found.$base_color;
+					}
+				}
 
-        &:not(:last-of-type){
-          margin: 0 20px 0 0;
-        }
-      }
-    }
-  }
+				&:not(:last-of-type) {
+					margin: 0 20px 0 0;
+				}
+			}
+		}
+	}
 }
 
 @include found.mq(sp) {
-  .l-nav{
-    &__list{
-      position: absolute;
-      top: 0;
-      right: -60%;
-      width: 60%;
-      height: 100vh;
-      background: found.$base_color;
-      @include found.flexbox;
-      @include found.flex-direction(column);
-      flex-direction: column;
-      padding: 20vh 0 0;
-      transition: .3s;
+	.l-nav {
+		&__list {
+			position: absolute;
+			top: 0;
+			right: -60%;
+			width: 60%;
+			height: 100vh;
+			background: found.$base_color;
+			@include found.flexbox;
+			@include found.flex-direction(column);
+			flex-direction: column;
+			padding: 20vh 0 0;
+			transition: .3s;
 
-      &__item{
-        width: 100%;
+			&__item {
+				width: 100%;
 
-        a{
-          display: block;
-          text-align: center;
-        padding: 5vh 0;
-        }
-      }
-    }
+				a {
+					display: block;
+					text-align: center;
+					padding: 5vh 0;
+				}
+			}
+		}
 
-    &.is-open{
-      .l-nav{
-        &__list{
-          right: 0;
-        }
-      }
-    }
-  }
+		&.is-open {
+			.l-nav {
+				&__list {
+					right: 0;
+				}
+			}
+		}
+	}
 }

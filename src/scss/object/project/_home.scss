@@ -1,210 +1,210 @@
 @use '../../foundations' as found;
 
 @include found.mq(pc) {
-  .p-home{
-    .p-home__fv{
-      height: 100vh;
-      background: url("../img/sample.png") center center / cover no-repeat;
-    }
+	.p-home {
+		.p-home__fv {
+			height: 100vh;
+			background: url("../img/sample.png") center center / cover no-repeat;
+		}
 
-    .p-home__about{
-      margin: 10vw 0 15vw;
+		.p-home__about {
+			margin: 10vw 0 15vw;
 
-      &__ttl{
-        margin: 0 0 3vw;
-      }
+			&__ttl {
+				margin: 0 0 3vw;
+			}
 
-      &__txtwrap{
-        width: 80%;
-        margin: 0 auto;
-      }
+			&__txtwrap {
+				width: 80%;
+				margin: 0 auto;
+			}
 
-      &__txt{
-        &:not(:last-of-type){
-          margin: 0 0 2vw;
-        }
-      }
-    }
+			&__txt {
+				&:not(:last-of-type) {
+					margin: 0 0 2vw;
+				}
+			}
+		}
 
-    .p-home__contents01{
-      margin: 10vw 0 15vw;
+		.p-home__contents01 {
+			margin: 10vw 0 15vw;
 
-      &__ttl{
-        margin: 0 0 3vw;
-      }
-      &__list{
-        @include found.grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        width: 80%;
-        margin: 0 auto;
+			&__ttl {
+				margin: 0 0 3vw;
+			}
+			&__list {
+				@include found.grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 20px;
+				width: 80%;
+				margin: 0 auto;
 
-        &__item{
-          &__img{
-            margin: 0 0 30px;
-          }
+				&__item {
+					&__img {
+						margin: 0 0 30px;
+					}
 
-          &__ttl{
-    margin: 0 0 20px;
-          }
-        }
-      }
-    }
+					&__ttl {
+						margin: 0 0 20px;
+					}
+				}
+			}
+		}
 
-    .p-home__contents02{
-      &__list{
-        &__item{
-          margin: 0 0 12vw;
+		.p-home__contents02 {
+			&__list {
+				&__item {
+					margin: 0 0 12vw;
 
-          figure{
-            @include found.flexbox;
-          @include found.flex-align(center);
-          position: relative;
-          }
-          
-          &__img{
-            width: 80%;
-            height: 50vh;
-            overflow: hidden;
-          }
+					figure {
+						@include found.flexbox;
+						@include found.flex-align(center);
+						position: relative;
+					}
 
-          &__ttl{
-            margin: 0 0 10px;
-          }
+					&__img {
+						width: 80%;
+						height: 50vh;
+						overflow: hidden;
+					}
 
-          figcaption{
-            width: 70%;
-            background: #fff;
-            padding: 30px 30px;
-            position: absolute;
-            bottom: -5vh;
-          }
+					&__ttl {
+						margin: 0 0 10px;
+					}
 
-          &:nth-of-type(odd){
-            figcaption{
-              right: 0;
-            }
-          }
+					figcaption {
+						width: 70%;
+						background: #fff;
+						padding: 30px 30px;
+						position: absolute;
+						bottom: -5vh;
+					}
 
-          &:nth-of-type(even){
-            figure{
-              flex-direction: row-reverse;
-            }
+					&:nth-of-type(odd) {
+						figcaption {
+							right: 0;
+						}
+					}
 
-            figcaption{
-              left: 0;
-            }
-          }
-        }
-      }
-    }
-  }
+					&:nth-of-type(even) {
+						figure {
+							flex-direction: row-reverse;
+						}
+
+						figcaption {
+							left: 0;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 @include found.mq(sp) {
-  .p-home{
-    .p-home__fv{
-      height: 90vh;
-      background: url("../img/sample.png") center center / cover no-repeat;
-    }
+	.p-home {
+		.p-home__fv {
+			height: 90vh;
+			background: url("../img/sample.png") center center / cover no-repeat;
+		}
 
-    .p-home__about{
-      margin: 10vw 0 25vw;
+		.p-home__about {
+			margin: 10vw 0 25vw;
 
-      &__ttl{
-        margin: 0 0 3vw;
-      }
+			&__ttl {
+				margin: 0 0 3vw;
+			}
 
-      &__txtwrap{
-        width: 90%;
-        margin: 0 auto;
-      }
+			&__txtwrap {
+				width: 90%;
+				margin: 0 auto;
+			}
 
-      &__txt{
-        &:not(:last-of-type){
-          margin: 0 0 5vw;
-        }
-      }
-    }
+			&__txt {
+				&:not(:last-of-type) {
+					margin: 0 0 5vw;
+				}
+			}
+		}
 
-    .p-home__contents01{
-      margin: 10vw auto 25vw;
-      width: 90%;
+		.p-home__contents01 {
+			margin: 10vw auto 25vw;
+			width: 90%;
 
-      &__ttl{
-        margin: 0 0 3vw;
-      }
-      &__list{
-        width: 100%;
-        margin: 0 auto;
-        display: block;
+			&__ttl {
+				margin: 0 0 3vw;
+			}
+			&__list {
+				width: 100%;
+				margin: 0 auto;
+				display: block;
 
-        &__item{
-          &:not(:last-of-type){
-          margin: 0 0 15vw;
-          }
+				&__item {
+					&:not(:last-of-type) {
+						margin: 0 0 15vw;
+					}
 
-          &__img{
-            margin: 0 0 30px;
-          }
+					&__img {
+						margin: 0 0 30px;
+					}
 
-          &__ttl{
-    margin: 0 0 20px;
-          }
-        }
-      }
-    }
+					&__ttl {
+						margin: 0 0 20px;
+					}
+				}
+			}
+		}
 
-    .p-home__contents02{
-      margin: 0 0 25vw;
+		.p-home__contents02 {
+			margin: 0 0 25vw;
 
-      &__list{
-        &__item{
-          &:not(:last-of-type){
-            margin: 0 0 15vw;
-            }
+			&__list {
+				&__item {
+					&:not(:last-of-type) {
+						margin: 0 0 15vw;
+					}
 
-          figure{
-            @include found.flexbox;
-          @include found.flex-align(center);
-          position: relative;
-          }
-          
-          &__img{
-            width: 80%;
-            height: 50vh;
-            overflow: hidden;
-          }
+					figure {
+						@include found.flexbox;
+						@include found.flex-align(center);
+						position: relative;
+					}
 
-          &__ttl{
-            margin: 0 0 10px;
-          }
+					&__img {
+						width: 80%;
+						height: 50vh;
+						overflow: hidden;
+					}
 
-          figcaption{
-            width: 90%;
-            background: #fff;
-            padding: 30px 30px;
-            position: absolute;
-            bottom: -5vh;
-          }
+					&__ttl {
+						margin: 0 0 10px;
+					}
 
-          &:nth-of-type(odd){
-            figcaption{
-              right: 0;
-            }
-          }
+					figcaption {
+						width: 90%;
+						background: #fff;
+						padding: 30px 30px;
+						position: absolute;
+						bottom: -5vh;
+					}
 
-          &:nth-of-type(even){
-            figure{
-              flex-direction: row-reverse;
-            }
+					&:nth-of-type(odd) {
+						figcaption {
+							right: 0;
+						}
+					}
 
-            figcaption{
-              left: 0;
-            }
-          }
-        }
-      }
-    }
-  }
+					&:nth-of-type(even) {
+						figure {
+							flex-direction: row-reverse;
+						}
+
+						figcaption {
+							left: 0;
+						}
+					}
+				}
+			}
+		}
+	}
 }

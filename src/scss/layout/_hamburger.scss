@@ -1,50 +1,49 @@
 @use '../foundations/' as found;
 
-
 @include found.mq(sp) {
 	.l-hamburger {
 		z-index: 1;
 		@include found.hbg-btn(5%, 5px);
-	
+
 		&__icon {
 			@include found.hbg-icon(2px, 30px);
-	
+
 			&:before {
 				@include found.hbg-icon-before(2px, 30px, -10px);
 			}
-	
+
 			&:after {
 				@include found.hbg-icon-after(2px, 30px, 10px);
 			}
 		}
-	
+
 		&.is-open {
 			.l-hamburger__icon {
 				transition-duration: 0.5s;
 				background: transparent;
-	
+
 				&:before {
 					transform: rotateZ(45deg) scaleX(1.25) translate(7px, 7px);
 				}
-	
+
 				&:after {
 					transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px);
 				}
 			}
 		}
 
-		&__list{
+		&__list {
 			display: none;
 
-			&.is-open{
+			&.is-open {
 				display: block;
-						z-index: 1;
-			width: 100%;
-			height: 100vh;
-			background: found.$base_color;
-			position: absolute;
-			top: 0;
-			left: 0;
+				z-index: 1;
+				width: 100%;
+				height: 100vh;
+				background: found.$base_color;
+				position: absolute;
+				top: 0;
+				left: 0;
 			}
 		}
 		&:hover {
