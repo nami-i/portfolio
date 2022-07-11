@@ -9,10 +9,10 @@
 
 // hamburger
 var ham = document.querySelector('#js-hamburger');
-var hamNav = document.querySelector('#js-hamburgerNav');
+var nav = document.querySelector('#js-nav');
 ham.addEventListener('click', function () {
   ham.classList.toggle('is-open');
-  hamNav.classList.toggle('is-open');
+  nav.classList.toggle('is-open');
 }); // scroll
 
 var scrollHeader = document.getElementById('js-header');
