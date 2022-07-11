@@ -6,17 +6,53 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
+    transition: .5s;
   
     &__wrap{
-      width: 95%;
       margin: 0 auto;
-      @include found.flexbox
+      @include found.grid;
+      grid-template-columns: 200px 1fr;
+      align-items: center;
+      gap: 30px;
+      width: 100%;
     }
   
     &__logo{
+      width: 200px;
+    }
+
+    &.is-scroll{
+      background: #fff;
+    }
+  }
+}
+
+@include found.mq(sp) {
+	.l-header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: .5s;
+  
+    &__wrap{
+      margin: 0 auto;
+      @include found.grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 30px;
+      width: 100%;
+      // position: relative;
     }
   
-    &__nav{
+    &__logo{
+      width: 100%;
+    }
+
+    &.is-scroll{
+      background: #fff;
     }
   }
 }

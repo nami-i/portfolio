@@ -1,42 +1,54 @@
 @use '../foundations/' as found;
 
-.l-hamburger {
-	@include found.hbg-btn(120px, 100px);
 
-	&__icon {
-		@include found.hbg-icon(8px, 60px);
-
-		&:before {
-			@include found.hbg-icon-before(8px, 60px, -20px);
-		}
-
-		&:after {
-			@include found.hbg-icon-after(8px, 60px, 20px);
-		}
-	}
-
-	&.is-open {
-		.l-hamburger__icon {
-			transition-duration: 0.5s;
-			background: transparent;
-
+@include found.mq(sp) {
+	.l-hamburger {
+		z-index: 1;
+		@include found.hbg-btn(5%, 5px);
+	
+		&__icon {
+			@include found.hbg-icon(2px, 30px);
+	
 			&:before {
-				transform: rotateZ(45deg) scaleX(1.25) translate(13px, 13px);
+				@include found.hbg-icon-before(2px, 30px, -10px);
 			}
-
+	
 			&:after {
-				transform: rotateZ(-45deg) scaleX(1.25) translate(12px, -12px);
+				@include found.hbg-icon-after(2px, 30px, 10px);
 			}
 		}
-	}
-	&:hover {
-		cursor: pointer;
-	}
-}
+	
+		&.is-open {
+			.l-hamburger__icon {
+				transition-duration: 0.5s;
+				background: transparent;
+	
+				&:before {
+					transform: rotateZ(45deg) scaleX(1.25) translate(7px, 7px);
+				}
+	
+				&:after {
+					transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px);
+				}
+			}
+		}
 
+		&__list{
+			display: none;
 
-@include found.mq(pc) {
-	.l-hamburger{
-		
+			&.is-open{
+				display: block;
+						z-index: 1;
+			width: 100%;
+			height: 100vh;
+			background: found.$base_color;
+			position: absolute;
+			top: 0;
+			left: 0;
+			}
+		}
+		&:hover {
+			cursor: pointer;
+		}
 	}
 }

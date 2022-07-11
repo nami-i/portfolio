@@ -1,1 +1,8 @@
 @use '../../foundations' as found;
+
+.c-heading{
+  &--center{
+    text-align: center;
+    font-weight: bold;
+  }
+}

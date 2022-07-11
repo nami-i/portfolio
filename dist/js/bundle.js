@@ -8,10 +8,22 @@
 /***/ (function() {
 
 // hamburger
-var ham = document.querySelector('#js-hamburger'); // const nav = document.querySelector('#js-nav');
-
+var ham = document.querySelector('#js-hamburger');
+var hamNav = document.querySelector('#js-hamburgerNav');
 ham.addEventListener('click', function () {
-  ham.classList.toggle('active'); // nav.classList.toggle('active');
+  ham.classList.toggle('is-open');
+  hamNav.classList.toggle('is-open');
+}); // scroll
+
+var scrollHeader = document.getElementById('js-header');
+window.addEventListener('scroll', function () {
+  var scroll = window.pageYOffset;
+
+  if (scroll > 0) {
+    scrollHeader.style.background = '#fff';
+  } else {
+    scrollHeader.style.background = 'transparent';
+  }
 });
 
 /***/ }),

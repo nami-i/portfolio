@@ -1,15 +1,12 @@
 @use "color" as color;
+@use "function" as function;
+
 
 // ==========================================================================
 // Breakpoint
 // ==========================================================================
-$breakpoint: (
-	sp: 'screen and (max-width: 767px)',
-	tab: 'screen and (min-width: 768px)',
-	pc: 'screen and (min-width: 1025px)'
-);
 @mixin mq($bp) {
-	@media #{map-get($breakpoint, $bp)} {
+	@media #{map-get(function.$breakpoint, $bp)} {
 		@content;
 	}
 }
@@ -17,10 +14,7 @@ $breakpoint: (
 // ==========================================================================
 // Font
 // ==========================================================================
-@mixin baseFont($weight: 400) {
-	font-family: $base-font;
-	font-weight: $weight;
-}
+
 
 // ==========================================================================
 // box-sizing（ボックスサイズ）
@@ -57,7 +51,7 @@ $breakpoint: (
 
 // 天地の中央に配置
 @mixin vertical-align {
-	position: relative;
+	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 }
@@ -67,6 +61,7 @@ $breakpoint: (
 // ==========================================================================
 @mixin flexbox {
 	display: flex;
+	flex-wrap: wrap;
 }
 // flex(モダンブラウザの旧仕様にも対応したflexの指定)
 @mixin flex($values) {
@@ -83,6 +78,21 @@ $breakpoint: (
 	} @else {
 		flex-direction: row;
 	}
+}
+
+@mixin flex-align($items) {
+	align-items: $items;
+}
+
+@mixin flex-justify($content) {
+	justify-content: $content;
+}
+
+// ==========================================================================
+// Grid
+// ==========================================================================
+@mixin grid {
+	display: grid;
 }
 
 // ==========================================================================
@@ -120,12 +130,12 @@ $breakpoint: (
 // ==========================================================================
 // Hamburger Button
 // ==========================================================================
-@mixin hbg-btn($left, $top) {
+@mixin hbg-btn($right, $top) {
 	position: absolute;
-	width: 60px;
-	height: 60px;
+	width: 30px;
+	height: 30px;
 	top: $top;
-	left: $left;
+	right: $right;
 	transition-duration: 0.5s;
 }
 
@@ -134,7 +144,7 @@ $breakpoint: (
 	position: absolute;
 	height: $height;
 	width: $width;
-	top: 30px;
+	top: 20px;
 	background-color: color.$font_color;
 }
 
